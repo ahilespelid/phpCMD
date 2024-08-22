@@ -1,0 +1,3 @@
+<?
+ob_start(); passthru("df -h | awk '{print $1}'"); echo '::'; passthru("df -h | awk '{print $2}'"); echo '::'; passthru("df -h | awk '{print $3}'"); echo '::'; passthru("df -h | awk '{print $4}'"); echo '::'; passthru("df -h | awk '{print $5}'"); echo '::'; passthru("df -h | awk '{print $6}'"); echo '::'; passthru("df -h | awk '{print $7}'"); 
+$ls = explode('::', str_replace(["\n","\t","\r"], ' ', ob_get_clean()));
